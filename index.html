@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/fabicon.png">
+    <title>Ryo Yamamoto Portfolio</title>
+  </head>
+  <body>
+    <section class="topContainer">
+      <div class="main">
+        <div class="mainItem centerName animation">
+          <h1>Ryo<br>Yamamoto</h1>
+        </div>
+      </div>
+      <div class="switchContainer">
+        <input type="checkbox" id="darkLight" class="darkLightSwitch">
+        <label for="darkLight" class="toggleDarkLight animation">
+          <i class="fas fa-moon"></i>
+          <i class="fas fa-sun"></i>
+          <div class="ball"></div>
+        </label>
+      </div>
+      <div class="nav animation">
+        <ul class="nav-links">
+          <li><button class="a nav-link">About Me</button></li>
+          <li><button class="b nav-link">Skills</button></li>
+          <li><button class="c nav-link">Works</button></li>
+          <li><button class="d nav-link">Contact Me</button></li>
+        </ul>
+      </div>
+    </section>
+      <section class="secondContainer">
+        <div class="mainItem aboutMe">
+          <div class="title-aboutme animation">
+            <h2>About Me</h2>
+          </div>
+          <div class="text animation">
+            <div class="article">
+              <p>My name is Ryo Yamamoto. I'm currently working at a complex facility as a part-time worker. Since I took a python beginner class(Code in Place) provided by Stanford University in April, I got interest in computer science. Please check my CV if you got interest.</p>
+              <button onclick="goCV()" class="cv">CV(pdf)</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="thirdContainer">
+        <div class="mainItem skills">
+          <div class="hardSkills animation">
+            <div class="title-hardSkills">
+              <h2>Hard Skills</h2>
+            </div>
+            <div class="list-hardSkills">
+              <ul>
+                <li>Bilingual (Japanese and English)</li>
+                <li>Sales</li>
+                <li>Photoshop</li>
+                <li>python</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Javascript</li>
+              </ul>
+            </div>
+          </div>
+          <div class="softSkills animation">
+            <div class="title-softSkills">
+              <h2>Soft Skills</h2>
+            </div>
+            <div class="list-softSkills">
+              <ul>
+                <li>Willingness to learn</li>
+                <li>Visual Communication</li>
+                <li>Teamwork</li>
+                <li>Time management</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="works mainItem animation">
+          <h2>Coming Soon...</h2>
+        </div>
+      </section>
+      <section class="fourthContainer">
+        <div class="mainItem contactMe">
+          <div class="title-contactme animation">
+            <h2>Contact Me</h2>
+          </div>
+          <div class="link">
+            <div class="item animation">
+                <button  onclick="goTwitter()" class="twitter contact"></button>
+            </div>
+            <div class="item animation">
+                <button onclick="goFacebook()" class="facebook contact"></button>
+            </div>
+            <div class="item animation">
+                <button onclick="goLinkedin()" class="linkedin contact"></button>
+            </div>
+            <div class="item animation">
+                <button onclick="goGmail()"class="mail contact"></button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <script src="https://kit.fontawesome.com/9006e11a27.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
