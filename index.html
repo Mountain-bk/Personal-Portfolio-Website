@@ -2,17 +2,13 @@
 <html lang="en" >
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="images/fabicon.png">
     <title>Ryo Yamamoto Portfolio</title>
   </head>
   <body>
     <section class="topContainer">
-      <div class="main">
-        <div class="mainItem centerName animation">
-          <h1>My<br>Portfolio</h1>
-        </div>
-      </div>
       <div class="switchContainer">
         <input type="checkbox" id="darkLight" class="darkLightSwitch">
         <label for="darkLight" class="toggleDarkLight animation">
@@ -20,6 +16,11 @@
           <i class="fas fa-sun"></i>
           <div class="ball"></div>
         </label>
+      </div>
+      <div class="main">
+        <div class="mainItem centerName animation">
+          <h2>My<br>Portfolio</h2>
+        </div>
       </div>
       <div class="nav animation">
         <ul class="nav-links">
@@ -86,18 +87,18 @@
           <div class="title-contactme animation">
             <h2>Contact Me</h2>
           </div>
-          <div class="link">
-            <div class="item animation">
-                <button  onclick="goTwitter()" class="twitter contact"></button>
+          <div class="link animation">
+            <div class="item">
+              <i onclick="goTwitter()" class="fab fa-twitter-square"></i>
             </div>
-            <div class="item animation">
-                <button onclick="goFacebook()" class="facebook contact"></button>
+            <div class="item">
+              <i onclick="goFacebook()" class="fab fa-facebook-square"></i>
             </div>
-            <div class="item animation">
-                <button onclick="goLinkedin()" class="linkedin contact"></button>
+            <div class="item">
+              <i  onclick="goLinkedin()" class="fab fa-linkedin"></i>
             </div>
-            <div class="item animation">
-                <button onclick="goGmail()"class="mail contact"></button>
+            <div class="item">
+              <i onclick="copyGmail()" class="fas fa-envelope"></i>
             </div>
           </div>
         </div>
