@@ -382,6 +382,7 @@ button:active{
   }.nav{
     display: none;
   }.centerName{
+    width: 80vw;
     font-size: 2rem;
   }.aboutMe{
     height:90%;
