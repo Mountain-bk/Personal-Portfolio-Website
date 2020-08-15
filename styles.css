@@ -340,6 +340,7 @@ a{
   height: 300px;
   text-align: center;
   font-size: 15rem;
+  line-height: 300px;
 }
 .item-link{
   color: #c73c63;
