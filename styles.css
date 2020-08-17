@@ -132,6 +132,9 @@ a{
   justify-content: center;
 }
 .top-links-row{
+
+}
+.top-font{
   display: flex;
   width: 100%;
 }
@@ -145,6 +148,31 @@ a{
 .top-item-link:hover{
   opacity: 0.5
 }
+.top-copy-pop{
+  width: 100%;
+}
+.top-copy-email-text{
+  font-size: 1.5rem;
+  background-color: #555;
+  color: #fff;
+  border-radius: 6px;
+  padding: 10px;
+  z-index: 1;
+  position: absolute;
+  transition: 0.25s ease;
+  opacity: 0;
+}
+.top-copy-email-text:before{
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 10%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #555 transparent;
+}
+
 .centerName{
   font-size: 4rem;
   color: #3b2e5a;
@@ -355,6 +383,12 @@ a{
 }
 .contactMe-links-container{
   text-align: center;
+  width: 90%;
+  margin: auto;
+  height: auto;
+}
+.contactMe-links-row{
+  width: 100%;
 }
 .item{
   width: 19%;
@@ -372,11 +406,51 @@ a{
   opacity: 0.5
 }
 
+.contact-copy-pop{
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+.contact-copy-email-text{
+  width: 19%;
+  font-size: 1.5rem;
+  background-color: #555;
+  color: #fff;
+  border-radius: 6px;
+  padding: 20px;
+  z-index: 1;
+  position: absolute;
+  transition: 0.25s ease;
+  opacity: 0;
+}
+.contact-copy-email-text:before{
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -15px;
+  border-width: 15px;
+  border-style: solid;
+  border-color: transparent transparent #555 transparent;
+}
 
 
 @media only screen and (max-width: 1024px){
   .item{
     width: 49%;
+  }
+  .contact-copy-pop{
+    width: 100%;
+    position: relative;
+    justify-content: center;
+  }
+  .contact-copy-email-text{
+    width: 60%;
+    padding: 20px;
+    font-size: 1.5rem;
+    position: absolute;
+    bottom: 20%;
   }
 }
 @media only screen and (max-width: 750px){
@@ -448,7 +522,19 @@ a{
     padding: 0 10px;
   }
   .contactMe-title{
+    width: 90%;
+  }
+  .contact-copy-pop{
     width: 100%;
+    position: relative;
+    justify-content: center;
+  }
+  .contact-copy-email-text{
+    width: 60%;
+    padding: 10px;
+    font-size: 1rem;
+    position: absolute;
+    bottom: 10%;
   }
 }
 
