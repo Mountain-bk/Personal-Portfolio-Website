@@ -102,8 +102,8 @@ const copyPopContact = document.querySelector(".contact-copy-email-text");
 
 //Top page//
 function displayPop(){
-  copyPop.style.opacity = "1";//Display copy-pop when on mouse over email font//
-  copyPop.innerHTML = "Copy email address";
+  copyPop.innerHTML = "Copy email address";//Display copy-pop when on mouse over email font//
+  copyPop.style.opacity = "1";
 }
 
 function hidePop(){
@@ -112,14 +112,15 @@ function hidePop(){
 
 emailFont.addEventListener("click", () =>{//Display message when you click email font//
   copyPop.innerHTML = "Copied!";
+  copyPop.style.opacity = "1";
   setTimeout(hidePop, 500);
 });
 
 
 //Contact Page//
 function displayContactPop(){
-  copyPopContact.style.opacity = "1";
   copyPopContact.innerHTML = "Copy email address";
+  copyPopContact.style.opacity = "1";
 }
 
 function hideContactPop(){
