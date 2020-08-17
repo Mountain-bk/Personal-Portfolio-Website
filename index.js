@@ -76,21 +76,24 @@ function scrollDown(key){
   }
 }
 
+//Clip Email Addrress to clip board//
+
 
 
 //Go to Link when Click Button//
-function goTwitter(){
-  open("https://twitter.com/home","_blank");
-}
-function goFacebook(){
-  open("https://www.facebook.com/ryo.yamamoto.1042", "_blank");
-}
-function goLinkedin(){
-  open("https://www.linkedin.com/in/ryo-yamamoto-9190591a7/", "_blank");
-}
-function goGmail(){
-  open("mailto:ryochaaaan0414@gmail.com", "_blank");
-}
 function goCV(){
   open("CV-Ryo Yamamoto.pdf", "_blank");
+}
+
+//---Copy email address---//
+function copyEmail(){
+  var copyEmail = document.getElementById("email");
+  copyEmail = copyEmail.getAttribute("data-email");
+  var textArea = document.createElement("textarea");
+  textArea.value = copyEmail;
+  document.body.appendChild(textArea);
+  textArea.select();
+  textArea.setSelectionRange(0, 99999)
+  document.execCommand("copy");
+  alert("Copied: " + textArea.value);
 }
