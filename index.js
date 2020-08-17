@@ -12,18 +12,34 @@ const navLink = [...document.getElementsByClassName("nav-link")]
 
 const darkItems = [...document.getElementsByClassName("darkItems")]
 
-//Toggle Dark Mode Light Mode//
+//---Toggle Dark Mode Light Mode---//
 const checkbox = document.querySelector(".darkLightSwitch");
 checkbox.addEventListener("change", function(){
   document.body.classList.toggle("dark-theme");
 });
 
-//Change Background Color when Scroll Down//
+//---Change Background Color when Scroll Down---//
 window.addEventListener("scroll", function(){
   changeBackgroundColor(document.body.className);
 })
 
-//Fade Contents and Change Background Color when Scroll Down//
+function changeBackgroundColor(key){
+  for (i=0; mainItem.length > i; i++){
+    var scrollTop = window.pageYOffset
+    if (scrollTop <= mainItem[i].offsetTop){
+      if (key == "dark-theme" || key == "dark-theme bluedark" || key == "dark-theme orangedark" || key == "dark-theme golddark" || key == "dark-theme reddark"){
+        document.body.className = darkColors[i]
+        break
+      } else{
+        document.body.className = lightColors[i]
+        break
+      }
+    }
+  }
+}
+
+
+//---Fade Contents and Change Background Color when Scroll Down---//
 const items = document.querySelectorAll(".animation")
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry =>{
@@ -46,24 +62,6 @@ for (var i = 0; navLink.length > i; i++){
   })
 }
 
-//Function List//
-
-function changeBackgroundColor(key){
-  for (i=0; mainItem.length > i; i++){
-    var scrollTop = window.pageYOffset
-    if (scrollTop <= mainItem[i].offsetTop){
-      if (key == "dark-theme" || key == "dark-theme bluedark" || key == "dark-theme orangedark" || key == "dark-theme golddark" || key == "dark-theme reddark"){
-        document.body.className = darkColors[i]
-        break
-      } else{
-        document.body.className = lightColors[i]
-        break
-      }
-    }
-  }
-}
-
-
 function scrollDown(key){
   if (key == "a nav-link" || key == "a nav-link dark"){
     window.scrollTo({top: sections[1].offsetTop, behavior: "smooth"});
@@ -76,16 +74,13 @@ function scrollDown(key){
   }
 }
 
-//Clip Email Addrress to clip board//
-
-
 
 //Go to Link when Click Button//
 function goCV(){
   open("CV-Ryo Yamamoto.pdf", "_blank");
 }
 
-//---Copy email address---//
+//---Copy email address to clip board---//
 function copyEmail(){
   var copyEmail = document.getElementById("email");
   copyEmail = copyEmail.getAttribute("data-email");
@@ -95,5 +90,42 @@ function copyEmail(){
   textArea.select();
   textArea.setSelectionRange(0, 99999)
   document.execCommand("copy");
-  alert("Copied: " + textArea.value);
+  document.body.removeChild(textArea);
 }
+
+//---Display copying message when hover or click email font---//
+
+const emailFont = document.querySelector("#email");
+const emailFontContact = document.querySelector("#emailContact");
+const copyPop = document.querySelector(".top-copy-email-text");
+const copyPopContact = document.querySelector(".contact-copy-email-text");
+
+//Top page//
+function displayPop(){
+  copyPop.style.opacity = "1";//Display copy-pop when on mouse over email font//
+}
+
+function hidePop(){
+  copyPop.style.opacity = "0";//Hide copy-pop when out mouse over email font//
+}
+
+emailFont.addEventListener("click", () =>{//Display message when you click email font//
+  copyPop.innerHTML = "Copied!";
+  setTimeout(hidePop, 500);
+});
+
+
+//Contact Page//
+function displayContactPop(){
+  copyPopContact.style.opacity = "1";
+}
+
+function hideContactPop(){
+  copyPopContact.style.opacity = "0";
+}
+
+emailFontContact.addEventListener("click", () =>{
+  copyPopContact.innerHTML = "Copied!";
+  copyPopContact.style.opacity = "1";
+  setTimeout(hideContactPop, 500);
+});
