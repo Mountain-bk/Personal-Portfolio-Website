@@ -103,6 +103,7 @@ const copyPopContact = document.querySelector(".contact-copy-email-text");
 //Top page//
 function displayPop(){
   copyPop.style.opacity = "1";//Display copy-pop when on mouse over email font//
+  copyPop.innerHTML = "Copy email address";
 }
 
 function hidePop(){
@@ -118,6 +119,7 @@ emailFont.addEventListener("click", () =>{//Display message when you click email
 //Contact Page//
 function displayContactPop(){
   copyPopContact.style.opacity = "1";
+  copyPopContact.innerHTML = "Copy email address";
 }
 
 function hideContactPop(){
