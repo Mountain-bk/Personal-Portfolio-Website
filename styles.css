@@ -386,21 +386,25 @@ a{
   width: 90%;
   margin: auto;
   height: auto;
+  padding-top: 40px;
 }
 .contactMe-links-row{
   width: 100%;
 }
+.contact-font{
+}
 .item{
-  width: 19%;
+  width: 15%;
   display: inline-block;
-  height: auto;
-  text-align: center;
-  font-size: 12rem;
+  padding: 10px;
 }
 .item-link{
   color: #c73c63;
   text-decoration: none;
   transition: 0.25s ease;
+}
+.item-link .fab, .item-link .fas{
+  font-size: 12rem;
 }
 .item-link:hover{
   opacity: 0.5
@@ -428,7 +432,7 @@ a{
   content: "";
   position: absolute;
   bottom: 100%;
-  left: 50%;
+  left: 10%;
   margin-left: -15px;
   border-width: 15px;
   border-style: solid;
@@ -438,7 +442,7 @@ a{
 
 @media only screen and (max-width: 1024px){
   .item{
-    width: 49%;
+    width: 40%;
   }
   .contact-copy-pop{
     width: 100%;
@@ -503,9 +507,6 @@ a{
   .text{
     font-size: 1.3rem;
   }
-  .item{
-    font-size: 7rem;
-  }
   .skills{
     height:90%;
     width: 85%;
@@ -524,6 +525,9 @@ a{
   .contactMe-title{
     width: 90%;
   }
+  .item-link .fab, .item-link .fas{
+    font-size: 7rem;
+  }
   .contact-copy-pop{
     width: 100%;
     position: relative;
@@ -534,7 +538,10 @@ a{
     padding: 10px;
     font-size: 1rem;
     position: absolute;
-    bottom: 10%;
+    bottom: 0;
+  }
+  .contact-copy-email-text:before{
+    left: 50%;
   }
 }
 
