@@ -43,6 +43,15 @@ body.dark-theme .toggleDarkLight{
   border: solid #1f4068 5px;
 }
 
+body.dark-theme .scroll-down-container h4{
+  color: #e8e4e1;
+}
+
+body.dark-theme .scroll-down-container span{
+  border-bottom: solid 1px #e8e4e1;
+  border-right: solid 1px #e8e4e1;
+}
+
 body.dark-theme .text{
   color: #e8e4e1;
 }
@@ -131,9 +140,7 @@ a{
   align-items: center;
   justify-content: center;
 }
-.top-links-row{
 
-}
 .top-font{
   display: flex;
   width: 100%;
@@ -262,6 +269,50 @@ a{
   border: 2mm ridge #c70039;
 }
 
+.scroll-down{
+  display: none;
+  width: 100%;
+}
+.scroll-down-container{
+  margin: auto;
+  text-align: center;
+}
+.scroll-down-container h4{
+  margin: 0;
+}
+.scroll-down-container span{
+  margin: auto;
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-bottom: solid 1px #3b2e5a;
+  border-right: solid 1px #3b2e5a;
+  transform: rotate(45deg);
+  animation: scrollDown 2s infinite;
+}
+
+.scroll-down-container span:nth-child(2){
+  animation-delay: -0.2s;
+}
+.scroll-down-container span:nth-child(3){
+  animation-delay: -0.4s;
+}
+
+
+@keyframes scrollDown {
+  0%
+  {
+    opacity: 0;
+  }
+  50%
+  {
+    opacity: 1;
+  }
+  100%
+  {
+    opacity: 0;
+  }
+}
 
 /*About Me*/
 .secondContainer{
@@ -459,7 +510,7 @@ a{
 }
 @media only screen and (max-width: 750px){
   .topContainer{
-    grid-template-rows: 15% auto;
+    grid-template-rows: 15% 70% 15%;
   }
   .top-item{
     width: 15%;
@@ -492,6 +543,9 @@ a{
   .centerName{
     width: 100%;
     font-size: 2rem;
+  }
+  .scroll-down{
+    display: block;
   }
   .aboutMe{
     height:90%;
