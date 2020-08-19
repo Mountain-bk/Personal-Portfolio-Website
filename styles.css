@@ -133,7 +133,7 @@ a{
 .topContainer{
   width:100%;
   display: grid;
-  grid-template-rows: 15% 70% 15%;
+  grid-template-rows: 10% 70% 20%;
 }
 .main, .nav{
   display: flex;
