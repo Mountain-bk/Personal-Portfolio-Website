@@ -510,7 +510,7 @@ a{
 }
 @media only screen and (max-width: 750px){
   .topContainer{
-    grid-template-rows: 10% 70% 20%;
+    grid-template-rows: 10% 65% 25%;
   }
   .top-item{
     width: 15%;
