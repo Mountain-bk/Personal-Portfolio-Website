@@ -55,12 +55,7 @@ items.forEach(item => {
   observer.observe(item);
 })
 
-//Scroll Down when click Nav//
-for (var i = 0; navLink.length > i; i++){
-  navLink[i].addEventListener("click", function(){
-    scrollDown(this.className);
-  })
-}
+
 
 function scrollDown(key){
   if (key == "a nav-link" || key == "a nav-link dark"){
@@ -74,8 +69,9 @@ function scrollDown(key){
   }
 }
 
+//---About Me page---//
 
-//Go to Link when Click Button//
+//Open CV(pdf) when Click Button//
 function goCV(){
   open("CV-Ryo Yamamoto.pdf", "_blank");
 }
@@ -100,7 +96,7 @@ const emailFontContact = document.querySelector("#emailContact");
 const copyPop = document.querySelector(".top-copy-email-text");
 const copyPopContact = document.querySelector(".contact-copy-email-text");
 
-//Top page//
+//---Top page---//
 function displayPop(){
   copyPop.innerHTML = "Copy email address";//Display copy-pop when on mouse over email font//
   copyPop.style.opacity = "1";
@@ -116,8 +112,76 @@ emailFont.addEventListener("click", () =>{//Display message when you click email
   setTimeout(hidePop, 500);
 });
 
+//Scroll Down when click Nav//
+for (var i = 0; navLink.length > i; i++){
+  navLink[i].addEventListener("click", function(){
+    scrollDown(this.className);
+  })
+}
 
-//Contact Page//
+//---Works Page---//
+
+//Open information of works//
+const infoBtn = document.querySelectorAll(".information-link");
+const modal = document.querySelector(".modal");
+const titleText = document.querySelector(".title-text");
+const languagesText = document.querySelector(".languages-text");
+const productionPeriodText = document.querySelector(".production-period-text");
+
+for(let i = 0; infoBtn.length > i; i++){
+  infoBtn[i].addEventListener("click", () =>{
+    modal.style.visibility = "visible";
+    modal.style.opacity = "1";
+    if(infoBtn[i].value == "Portfolio"){
+      titleText.innerHTML = "<p>My Portfolio</p>";
+      languagesText.innerHTML =
+      "<div class='language-icon'>" +
+        "<i class='fab fa-html5'></i>" +
+        "<p>HTML</p>" +
+      "</div>" +
+      "<div class='language-icon'>" +
+        "<i class='fab fa-css3-alt'></i>" +
+        "<p>CSS</p>" +
+      "</div>" +
+      "<div class='language-icon'>" +
+        "<i class='fab fa-js'></i>" +
+        "<p>JavaScript</p>" +
+      "</div>";
+      productionPeriodText.innerHTML =
+      "<p>Since July 19th</p>" +
+      "<p>(Start learning HTML, CSS, JavaScript since June 22nd)</p>";
+    }else if(infoBtn[i].value == "Jappalo Wings"){
+      titleText.innerHTML = "<p>Jappalo Wings(Fast food imitation)</p>";
+      languagesText.innerHTML =
+      "<div class='language-icon'>" +
+        "<i class='fab fa-html5'></i>" +
+        "<p>HTML</p>" +
+      "</div>" +
+      "<div class='language-icon'>" +
+        "<i class='fab fa-css3-alt'></i>" +
+        "<p>CSS</p>" +
+      "</div>" +
+      "<div class='language-icon'>" +
+        "<i class='fab fa-js'></i>" +
+        "<p>JavaScript</p>" +
+      "</div>";
+      productionPeriodText.innerHTML =
+      "<p>Since July 30th</p>" +
+      "<p>(Start learning HTML, CSS, JavaScript since June 22nd)</p>";
+    }
+  });
+}
+
+
+//Close information of works//
+const closeBtn = document.querySelector(".close-btn");
+
+closeBtn.addEventListener("click", () =>{
+  modal.style.visibility = "hidden";
+  modal.style.opacity = "0";
+})
+
+//---Contact Page---//
 function displayContactPop(){
   copyPopContact.innerHTML = "Copy email address";
   copyPopContact.style.opacity = "1";
