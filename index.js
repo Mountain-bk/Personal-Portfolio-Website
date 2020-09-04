@@ -127,6 +127,7 @@ const modal = document.querySelector(".modal");
 const titleText = document.querySelector(".title-text");
 const languagesText = document.querySelector(".languages-text");
 const productionPeriodText = document.querySelector(".production-period-text");
+const urlText = document.querySelector(".url-text");
 
 for(let i = 0; infoBtn.length > i; i++){
   infoBtn[i].addEventListener("click", () =>{
@@ -134,6 +135,7 @@ for(let i = 0; infoBtn.length > i; i++){
     modal.style.opacity = "1";
     if(infoBtn[i].value == "Portfolio"){
       titleText.innerHTML = "<p>My Portfolio</p>";
+      urlText.innerHTML = "<a href='https://mountain-bk.github.io/Portfolio/''>https://mountain-bk.github.io/Portfolio/</a>"
       languagesText.innerHTML =
       "<div class='language-icon'>" +
         "<i class='fab fa-html5'></i>" +
@@ -148,10 +150,11 @@ for(let i = 0; infoBtn.length > i; i++){
         "<p>JavaScript</p>" +
       "</div>";
       productionPeriodText.innerHTML =
-      "<p>Since July 19th</p>" +
-      "<p>(Start learning HTML, CSS, JavaScript since June 22nd)</p>";
+      "<p>Since Jul 19th</p>" +
+      "<p>(Start learning HTML, CSS, JavaScript since Jun 22nd)</p>";
     }else if(infoBtn[i].value == "Jappalo Wings"){
       titleText.innerHTML = "<p>Jappalo Wings(Fast food imitation)</p>";
+      urlText.innerHTML = "<a href='https://mountain-bk.github.io/Portfolio-Project-1/''>https://mountain-bk.github.io/Portfolio-Project-1/</a>"
       languagesText.innerHTML =
       "<div class='language-icon'>" +
         "<i class='fab fa-html5'></i>" +
@@ -166,8 +169,20 @@ for(let i = 0; infoBtn.length > i; i++){
         "<p>JavaScript</p>" +
       "</div>";
       productionPeriodText.innerHTML =
-      "<p>Since July 30th</p>" +
-      "<p>(Start learning HTML, CSS, JavaScript since June 22nd)</p>";
+      "<p>Since Jul 30th</p>" +
+      "<p>(Start learning HTML, CSS, JavaScript since Jun 22nd)</p>";
+    }else if(infoBtn[i].value == "Netflix Original Comedy Movie Suggestion Program"){
+      titleText.innerHTML = "<p>Netflix Original Comedy Movie Suggestion Program</p>" +
+      "<p><a href='https://engineering.stanford.edu/news/free-coding-education-time-covid-19' 'target='_blank'>CS106A - Code in Place Final Project</a></p>";
+      urlText.innerHTML = "<a href='https://twitter.com/RyoYama37915576/status/1301489345308680192''target='_blank'>Demo Video</a>"
+      languagesText.innerHTML =
+      "<div class='language-icon'>" +
+        "<i class='fab fa-python'></i>" +
+        "<p>Python</p>" +
+      "</div>";
+      productionPeriodText.innerHTML =
+      "<p>Python Code(May 14th - May 24th)</p>" +
+      "<p>Tkinter Code(Aug 31st - Sep 4th)</p>";
     }
   });
 }
