@@ -56,14 +56,22 @@ body.dark-theme .text{
   color: #e8e4e1;
 }
 
+body.dark-theme .title-aboutme{
+  background-color: transparent;
+  border: solid 5px #111d5e;
+  color: #111d5e;
+  box-shadow: 0 0 5px #111d5e;
+  color: #e8e4e1;
+}
+
 body.dark-theme .hardSkills, body.dark-theme .softSkills{
-  background-color: #401E09;
+  background-color: transparent;
   border: solid 5px #f25d00;
   box-shadow: 0 0 5px #f25d00;
 }
 
 body.dark-theme .works-title{
-  background-color: #4D391F;
+  background-color: transparent;
   border: solid 5px #FFBD69;
   color: #FFBD69;
   box-shadow: 0 0 5px #FFBD69;
@@ -86,7 +94,7 @@ body.dark-theme .github-link{
 }
 
 body.dark-theme .contactMe-title{
-  background-color: #36000F;
+  background-color: transparent;
   border: solid 5px #bd0a64;
   color: #bd0a64;
   box-shadow: 0 0 5px #bd0a64;
