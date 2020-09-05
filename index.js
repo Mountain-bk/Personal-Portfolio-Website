@@ -135,7 +135,7 @@ for(let i = 0; infoBtn.length > i; i++){
     modal.style.opacity = "1";
     if(infoBtn[i].value == "Portfolio"){
       titleText.innerHTML = "<p>Personal Portfolio Website</p>";
-      urlText.innerHTML = "<a href='https://mountain-bk.github.io/Portfolio/' target='_blank'>https://mountain-bk.github.io/Portfolio/</a>"
+      urlText.innerHTML = "<a href='https://mountain-bk.github.io/Personal-Portfolio-Website/' target='_blank'>https://mountain-bk.github.io/Personal-Portfolio-Website/</a>"
       languagesText.innerHTML =
       "<div class='language-icon'>" +
         "<i class='fab fa-html5'></i>" +
