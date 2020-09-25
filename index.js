@@ -196,6 +196,12 @@ closeBtn.addEventListener("click", () =>{
   modal.style.opacity = "0";
 })
 
+modal.addEventListener("click", () =>{
+  modal.style.visibility = "hidden";
+  modal.style.opacity = "0";
+})
+
+
 //---Contact Page---//
 function displayContactPop(){
   copyPopContact.innerHTML = "Copy email address";
