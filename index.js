@@ -128,12 +128,19 @@ const titleText = document.querySelector(".title-text");
 const languagesText = document.querySelector(".languages-text");
 const productionPeriodText = document.querySelector(".production-period-text");
 const urlText = document.querySelector(".url-text");
+const modalImageContainer = document.querySelector(".modal-img-container");
+const carouselBanner1 = document.querySelector(".banner1");
+const carouselBanner2 = document.querySelector(".banner2");
+const carouselBanner3 = document.querySelector(".banner3");
 
 for(let i = 0; infoBtn.length > i; i++){
   infoBtn[i].addEventListener("click", () =>{
     modal.style.visibility = "visible";
     modal.style.opacity = "1";
     if(infoBtn[i].value == "Portfolio"){
+      carouselBanner1.innerHTML = "<img class='carousel-image' src='images/Buffalo Wings.jpg'>"
+      carouselBanner2.innerHTML = "<img class='carousel-image' src='images/Jappalo Wings Top Page.png'>"
+      carouselBanner3.innerHTML = "<img class='carousel-image' src='images/Portfolio Image.png'>"
       titleText.innerHTML = "<p>Personal Portfolio Website</p>";
       urlText.innerHTML = "<a href='https://mountain-bk.github.io/Personal-Portfolio-Website/' target='_blank'>https://mountain-bk.github.io/Personal-Portfolio-Website/</a>"
       languagesText.innerHTML =
@@ -149,9 +156,6 @@ for(let i = 0; infoBtn.length > i; i++){
         "<i class='fab fa-js'></i>" +
         "<p>JavaScript</p>" +
       "</div>";
-      productionPeriodText.innerHTML =
-      "<p>Since Jul 19th</p>" +
-      "<p>(Start learning HTML, CSS, JavaScript since Jun 22nd)</p>";
     }else if(infoBtn[i].value == "Jappalo Wings"){
       titleText.innerHTML = "<p>Jappalo Wings(Fast food imitation)</p>";
       urlText.innerHTML = "<a href='https://mountain-bk.github.io/Portfolio-Project-1/' target='_blank'>https://mountain-bk.github.io/Portfolio-Project-1/</a>"
@@ -168,9 +172,6 @@ for(let i = 0; infoBtn.length > i; i++){
         "<i class='fab fa-js'></i>" +
         "<p>JavaScript</p>" +
       "</div>";
-      productionPeriodText.innerHTML =
-      "<p>Since Jul 30th</p>" +
-      "<p>(Start learning HTML, CSS, JavaScript since Jun 22nd)</p>";
     }else if(infoBtn[i].value == "Netflix Original Comedy Movie Suggestion Program"){
       titleText.innerHTML = "<p>Netflix Original Comedy Movie Suggestion Program</p>" +
       "<p><a href='https://engineering.stanford.edu/news/free-coding-education-time-covid-19' target='_blank'>CS106A - Code in Place Final Project</a></p>";
@@ -180,12 +181,42 @@ for(let i = 0; infoBtn.length > i; i++){
         "<i class='fab fa-python'></i>" +
         "<p>Python</p>" +
       "</div>";
-      productionPeriodText.innerHTML =
-      "<p>Python Code(May 14th - May 24th)</p>" +
-      "<p>Tkinter Code(Aug 31st - Sep 4th)</p>";
     }
   });
 }
+
+//Carousel//
+const carouselSlide = document.querySelector(".carousel-slide");
+const carouselImages = document.querySelectorAll(".carousel-image");
+const carouselContainer = document.querySelector(".carousel-container");
+const carouselBanner = document.querySelectorAll(".banner");
+
+//Slide next image when click arrow//
+const nextBtn = document.querySelector(".carousel-button-right");
+const prevBtn = document.querySelector(".carousel-button-left");
+
+nextBtn.addEventListener("click", () =>{
+  var banner = carouselBanner.length;
+  size = carouselBanner1.offsetWidth;
+  var limitWidth = (carouselSlide.offsetWidth / banner) * (banner - 1);
+  console.log(limitWidth);
+  console.log(carouselContainer.scrollLeft)
+  if(carouselContainer.scrollLeft == limitWidth){
+    carouselContainer.scrollBy(-carouselContainer.scrollWidth, 0);
+  } else{
+    carouselContainer.scrollBy(size, 0);
+  }
+});
+
+prevBtn.addEventListener("click", () =>{
+  var banner = carouselBanner.length;
+  size = carouselBanner1.offsetWidth;
+  if(carouselContainer.scrollLeft == 0){
+    carouselContainer.scrollBy(carouselContainer.scrollWidth, 0);
+  } else{
+    carouselContainer.scrollBy(-size, 0);
+  }
+});
 
 
 //Close information of works//
@@ -194,6 +225,7 @@ const closeBtn = document.querySelector(".close-btn");
 closeBtn.addEventListener("click", () =>{
   modal.style.visibility = "hidden";
   modal.style.opacity = "0";
+  carouselContainer.scrollBy(-carouselContainer.scrollWidth, 0);
 })
 
 
