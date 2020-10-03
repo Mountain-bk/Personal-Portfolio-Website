@@ -138,49 +138,34 @@ for(let i = 0; infoBtn.length > i; i++){
     modal.style.visibility = "visible";
     modal.style.opacity = "1";
     if(infoBtn[i].value == "Portfolio"){
-      carouselBanner1.innerHTML = "<img class='carousel-image' src='images/Buffalo Wings.jpg'>"
-      carouselBanner2.innerHTML = "<img class='carousel-image' src='images/Jappalo Wings Top Page.png'>"
-      carouselBanner3.innerHTML = "<img class='carousel-image' src='images/Portfolio Image.png'>"
+      carouselBanner1.innerHTML = "<img class='carousel-image' src='images/Portfolio Image1.png'>"
+      carouselBanner2.innerHTML = "<img class='carousel-image' src='images/Portfolio Image2.png'>"
+      carouselBanner3.innerHTML = "<img class='carousel-image' src='images/Portfolio Image3.png'>"
       titleText.innerHTML = "<p>Personal Portfolio Website</p>";
       urlText.innerHTML = "<a href='https://mountain-bk.github.io/Personal-Portfolio-Website/' target='_blank'>https://mountain-bk.github.io/Personal-Portfolio-Website/</a>"
-      languagesText.innerHTML =
-      "<div class='language-icon'>" +
-        "<i class='fab fa-html5'></i>" +
-        "<p>HTML</p>" +
-      "</div>" +
-      "<div class='language-icon'>" +
-        "<i class='fab fa-css3-alt'></i>" +
-        "<p>CSS</p>" +
-      "</div>" +
-      "<div class='language-icon'>" +
-        "<i class='fab fa-js'></i>" +
-        "<p>JavaScript</p>" +
-      "</div>";
+      languagesText.innerHTML = "HTML, CSS, JavaScript";
     }else if(infoBtn[i].value == "Jappalo Wings"){
+      carouselBanner1.innerHTML = "<img class='carousel-image' src='images/Jappalo Wings1.png'>"
+      carouselBanner2.innerHTML = "<img class='carousel-image' src='images/Jappalo Wings2.png'>"
+      carouselBanner3.innerHTML = "<img class='carousel-image' src='images/Jappalo Wings3.png'>"
       titleText.innerHTML = "<p>Jappalo Wings(Fast food imitation)</p>";
       urlText.innerHTML = "<a href='https://mountain-bk.github.io/Portfolio-Project-1/' target='_blank'>https://mountain-bk.github.io/Portfolio-Project-1/</a>"
-      languagesText.innerHTML =
-      "<div class='language-icon'>" +
-        "<i class='fab fa-html5'></i>" +
-        "<p>HTML</p>" +
-      "</div>" +
-      "<div class='language-icon'>" +
-        "<i class='fab fa-css3-alt'></i>" +
-        "<p>CSS</p>" +
-      "</div>" +
-      "<div class='language-icon'>" +
-        "<i class='fab fa-js'></i>" +
-        "<p>JavaScript</p>" +
-      "</div>";
+      languagesText.innerHTML = "HTML, CSS, JavaScript";
     }else if(infoBtn[i].value == "Netflix Original Comedy Movie Suggestion Program"){
+      carouselBanner1.innerHTML = "<img class='carousel-image' src='images/Netflix Suggestor1.png'>"
+      carouselBanner2.innerHTML = "<img class='carousel-image' src='images/Netflix Suggestor2.png'>"
+      carouselBanner3.innerHTML = "<img class='carousel-image' src='images/Netflix Suggestor3.png'>"
       titleText.innerHTML = "<p>Netflix Original Comedy Movie Suggestion Program</p>" +
       "<p><a href='https://engineering.stanford.edu/news/free-coding-education-time-covid-19' target='_blank'>CS106A - Code in Place Final Project</a></p>";
       urlText.innerHTML = "<a href='https://twitter.com/RyoYama37915576/status/1301489345308680192' target='_blank'>Demo Video</a>"
-      languagesText.innerHTML =
-      "<div class='language-icon'>" +
-        "<i class='fab fa-python'></i>" +
-        "<p>Python</p>" +
-      "</div>";
+      languagesText.innerHTML = "Python(Tkinter)"
+    }else if(infoBtn[i].value == "Web Scraper"){
+      carouselBanner1.innerHTML = "<img class='carousel-image' src='images/Web Scraper1.png'>"
+      carouselBanner2.innerHTML = "<img class='carousel-image' src='images/Web Scraper2.png'>"
+      carouselBanner3.innerHTML = "<img class='carousel-image' src='images/Web Scraper3.png'>"
+      titleText.innerHTML = "<p>Autonomous Vehicle Company Web Scraper</p>"
+      urlText.innerHTML = "<a href='https://github.com/Mountain-bk/Autonomous-vehicle-companies-career-web-scraper' target='_blank'>Github</a>"
+      languagesText.innerHTML = "Python(bs4, Selenium, NumPy, Pandas, Matplotlib)"
     }
   });
 }
@@ -198,10 +183,12 @@ const prevBtn = document.querySelector(".carousel-button-left");
 nextBtn.addEventListener("click", () =>{
   var banner = carouselBanner.length;
   size = carouselBanner1.offsetWidth;
-  var limitWidth = (carouselSlide.offsetWidth / banner) * (banner - 1);
+  var slide = (carouselContainer.offsetWidth * 3);
+  var limitWidth = ((slide / banner) * (banner - 1)) - 1;
   console.log(limitWidth);
   console.log(carouselContainer.scrollLeft)
-  if(carouselContainer.scrollLeft == limitWidth){
+  console.log(slide);
+  if(carouselContainer.scrollLeft >= limitWidth){
     carouselContainer.scrollBy(-carouselContainer.scrollWidth, 0);
   } else{
     carouselContainer.scrollBy(size, 0);
