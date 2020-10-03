@@ -121,6 +121,48 @@ for (var i = 0; navLink.length > i; i++){
 
 //---Works Page---//
 
+//Open hover screen when clicking project image//
+const portfolio = document.querySelector(".portfolio");
+const jappaloWings = document.querySelector(".jappalo-wings");
+const netflixSuggestor = document.querySelector(".netflix-suggestor");
+const webScraper = document.querySelector(".web-scraper");
+
+const project = [...document.getElementsByClassName("project")]
+
+const projectHovers = [...document.getElementsByClassName("works-hover")]
+
+for(let i = 0; project.length > i; i++){
+  project[i].addEventListener("click", ()=>{
+    if(projectHovers[i].style.opacity == "0"){
+      projectHovers[i].style.opacity = "1";
+    }else{
+      projectHovers[i].style.opacity = "0";
+    }
+  })
+}
+
+for(let i = 0; project.length > i; i++){
+  project[i].addEventListener("mouseover", ()=>{
+    projectHovers[i].style.opacity = "1";
+  })
+}
+
+for(let i = 0; project.length > i; i++){
+  project[i].addEventListener("mouseout", ()=>{
+    projectHovers[i].style.opacity = "0";
+  })
+}
+
+//portfolio.addEventListener("click", ()=>{
+  //if(projectHovers[0].style.opacity == "0"){
+    //projectHovers[0].style.opacity = "1";
+  //}else{
+    //projectHovers[0].style.opacity = "0";
+  //}
+//})
+
+
+
 //Open information of works//
 const infoBtn = document.querySelectorAll(".information-link");
 const modal = document.querySelector(".modal");
@@ -132,8 +174,6 @@ const modalImageContainer = document.querySelector(".modal-img-container");
 const carouselBanner1 = document.querySelector(".banner1");
 const carouselBanner2 = document.querySelector(".banner2");
 const carouselBanner3 = document.querySelector(".banner3");
-const project = document.querySelectorAll(".project");
-const projectHover = document.querySelectorAll(".works-hover");
 
 for(let i = 0; infoBtn.length > i; i++){
   infoBtn[i].addEventListener("click", () =>{
