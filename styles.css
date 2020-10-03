@@ -121,9 +121,7 @@ li, p, button{
   font-family: 'Raleway', sans-serif;
 }
 
-section{
-  height:100vh;
-}
+
 
 button{
   border: none;
@@ -168,6 +166,7 @@ a{
   width:100%;
   display: grid;
   grid-template-rows: 15% 70% 15%;
+  height:100vh;
 }
 .main, .nav{
   display: flex;
@@ -353,6 +352,7 @@ a{
   display:flex;
   align-items: center;
   justify-content: center;
+  height:100vh;
 }
 
 .aboutMe{
@@ -399,6 +399,7 @@ a{
   display:flex;
   align-items: center;
   justify-content: center;
+  height:100vh;
 }
 
 .skills{
@@ -436,11 +437,11 @@ a{
 }
 
 /*Works*/
-.fourthContainer-container{
+.fourthContainer{
+  height: auto;
   width: 100%;
-  height: 100%;
-  padding-top: 50px;
 }
+
 .works{
   width: 90%;
   height: 100%;
@@ -448,7 +449,6 @@ a{
 }
 .works-title{
   width: 100%;
-  height: 20%;
   font-size: 2rem;
   color: white;
   background: #FFBD69;
@@ -456,59 +456,149 @@ a{
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 20px 0px;
 }
-.works-projects-container{
-  width: 100%;
-  height: 80%;
-  padding-top: 30px;
-}
-.works-project{
-  position: relative;
-  width: 29%;
-  height: auto;
-  display: inline-block;
-  background-color: #FFBD69;
-  border: solid 2px #4D391F;
-  margin: 20px;
-  padding: 10px;
-}
-.project-image{
-  width: 100%;
-  height: 180px;
-}
-.project-image:hover{
-  opacity: 0.5;
-}
-.jappalo-wings, .portfolio, .netflix-comedy-movie-suggestor{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.information-container, .github-box{
-  width: auto;
-  height: 50px;
+
+
+.learn-more{
   margin-bottom: 5px;
   border: solid 2px #4D391F;
-
+  color: #4D391F;
+  font-weight: bold;
 }
 
-.information-link, .github-link{
+
+.works-projects-container{
+  margin: auto;
+  max-width: 1250px;
+  display: flex;
+  justify-content: center;
+  height: auto;
+  margin-top: 50px;
+}
+
+.projects{
+  width: 100%;
+  text-align: center;
+  font-size: 0;
+}
+
+.project{
+  height: 300px;
+  width: 30%;
+  background-size: cover;
+  background-position: center;
+  display: inline-block;
+  border: 0;
+  margin: 0 auto;
+}
+
+.portfolio{
+  background-image: url("images/Portfolio Image1.png");
+}
+.jappalo-wings{
+  background-image: url("images/Buffalo Wings.jpg");
+}
+.netflix-suggestor{
+  background-image: url("images/Netflix Suggestor1.png");
+}
+.web-scraper{
+  background-image: url("images/Programming Language Usage.png");
+}
+
+.works-hover{
+  opacity: 0;
+  background: white;
   width: 100%;
   height: 100%;
-  color: black;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-}
-.information-link{
-  background: white;
-}
-.github-link{
-  background-color: #e8e4e1;
+  -webkit-transition: 0.4s;
+  transition: 0.4s ease;
 }
 
-.github-link i{
-  padding-left: 6px;
+.project:hover .works-hover{
+  opacity:1;
 }
+
+.new-project-image{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.project-title{
+  font-size: 1.5rem;
+}
+
+.information-link{
+  background-color: transparent;
+}
+
+.carousel, .carousel-slide, .banner, .carousel-image{
+  height: 500px;
+}
+
+.carousel{
+  width: 100%;
+  z-index: 0;
+  position: relative;
+}
+
+.carousel-container{
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  ms-overflow-style: none;
+  scroll-snap-type: x mandatory;
+  transition: 1s ease;
+}
+
+.carousel-container::-webkit-scrollbar{
+  display: none;
+}
+
+.carousel-slide{
+  width: 300%;
+  left: 0px;
+  display: flex;
+}
+
+.banner1, .banner2, .banner3{
+  scroll-snap-align: center;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.carousel-image{
+  width: 95%;
+  object-fit: cover;
+}
+
+.carousel-button-left, .carousel-button-right{
+  border: transparent;
+  outline: none;
+  background: transparent;
+  position: absolute;
+  top: 27%;
+  color: black;
+}
+
+.carousel-button-left{
+  left:0%;
+}
+
+.carousel-button-right{
+  right:0%;
+}
+
+.control .fas{
+  font-size: 2rem;
+}
+
 
 /*Contact*/
 
@@ -519,6 +609,7 @@ a{
   display: flex;
   align-items: center;
   text-align: center;
+  height:100vh;
 }
 .fifthContainer-content{
   width: 100%;
@@ -612,7 +703,7 @@ a{
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: white;
-  width: 30%;
+  max-width: 1024px;
   height: auto;
   border-radius: 0.5rem;
   z-index: 100;
@@ -662,6 +753,12 @@ a{
   }
   .works-project{
     width: 40%;
+  }
+  .project{
+    width: 45%;
+  }
+  .modal-content-container{
+    width: 65%;
   }
 }
 
@@ -753,6 +850,12 @@ a{
     height: auto;
     margin: 0 0 20px 0;
   }
+  .carousel, .carousel-slide, .banner, .carousel-image{
+    height: 250px;
+  }
+  .project{
+    width: 100%;
+  }
   .information-link, .github-link{
     transform: none !important;
   }
@@ -778,7 +881,7 @@ a{
     left: 50%;
   }
   .modal-content-container{
-    width: 70%;
+    width: 80%;
   }
 }
 
