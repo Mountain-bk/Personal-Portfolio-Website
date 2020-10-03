@@ -519,10 +519,6 @@ a{
   transition: 0.4s ease;
 }
 
-.project:hover .works-hover, .project:focus .works-hover{
-  opacity:1;
-}
-
 .new-project-image{
   object-fit: cover;
   width: 100%;
