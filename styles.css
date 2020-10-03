@@ -519,7 +519,13 @@ a{
   transition: 0.4s ease;
 }
 
-.project:hover, .project:active, .project:focus .works-hover{
+.project:hover .works-hover{
+  opacity:1;
+}
+.project:active .works-hover{
+  opacity:1;
+}
+.project:focus .works-hover{
   opacity:1;
 }
 
