@@ -132,6 +132,8 @@ const modalImageContainer = document.querySelector(".modal-img-container");
 const carouselBanner1 = document.querySelector(".banner1");
 const carouselBanner2 = document.querySelector(".banner2");
 const carouselBanner3 = document.querySelector(".banner3");
+const project = document.querySelectorAll(".project");
+const projectHover = document.querySelectorAll(".works-hover");
 
 for(let i = 0; infoBtn.length > i; i++){
   infoBtn[i].addEventListener("click", () =>{
@@ -169,6 +171,7 @@ for(let i = 0; infoBtn.length > i; i++){
     }
   });
 }
+
 
 //Carousel//
 const carouselSlide = document.querySelector(".carousel-slide");
