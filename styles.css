@@ -507,7 +507,6 @@ a{
 }
 
 .works-hover{
-  opacity: 0;
   background: white;
   width: 100%;
   height: 100%;
@@ -518,6 +517,7 @@ a{
   -webkit-transition: 0.4s;
   transition: 0.4s ease;
 }
+
 
 .new-project-image{
   object-fit: cover;
@@ -837,14 +837,6 @@ a{
   }
   .github-box, .information-container{
     width: 100%;
-  }
-  .works-projects-container{
-    display: inline-block;
-  }
-  .works-project{
-    width: auto;
-    height: auto;
-    margin: 0 0 20px 0;
   }
   .carousel, .carousel-slide, .banner, .carousel-image{
     height: 250px;
