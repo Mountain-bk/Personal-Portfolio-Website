@@ -131,35 +131,33 @@ const project = [...document.getElementsByClassName("project")]
 
 const projectHovers = [...document.getElementsByClassName("works-hover")]
 
-for(let i = 0; project.length > i; i++){
-  project[i].addEventListener("click", ()=>{
-    if(projectHovers[i].style.opacity == "0"){
-      projectHovers[i].style.opacity = "1";
-    }else{
-      projectHovers[i].style.opacity = "0";
+
+
+
+function hoverEffects(x){
+  if (x.matches) { // If media query matches
+    for(let i = 0; project.length > i; i++){
+      project[i].addEventListener("mouseover", ()=>{
+        projectHovers[i].style.opacity = "1";
+      })
+      project[i].addEventListener("mouseout", ()=>{
+        projectHovers[i].style.opacity = "0";
+      })
     }
-  })
+  } else {
+    for(let i = 0; projectHovers.length > i; i++){
+      projectHovers[i].addEventListener("click", ()=>{
+        projectHovers[i].style.opacity =  ( projectHovers[i].style.opacity ==  "0" ? "1" : "0");
+      })
+    }
+  }
 }
 
-for(let i = 0; project.length > i; i++){
-  project[i].addEventListener("mouseover", ()=>{
-    projectHovers[i].style.opacity = "1";
-  })
-}
+var x = window.matchMedia("(min-width: 1024px)")
+hoverEffects(x) // Call listener function at run time
+x.addListener(hoverEffects) // Attach listener function on state changes
 
-for(let i = 0; project.length > i; i++){
-  project[i].addEventListener("mouseout", ()=>{
-    projectHovers[i].style.opacity = "0";
-  })
-}
 
-//portfolio.addEventListener("click", ()=>{
-  //if(projectHovers[0].style.opacity == "0"){
-    //projectHovers[0].style.opacity = "1";
-  //}else{
-    //projectHovers[0].style.opacity = "0";
-  //}
-//})
 
 
 
