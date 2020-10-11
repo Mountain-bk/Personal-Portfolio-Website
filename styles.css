@@ -84,12 +84,13 @@ body.dark-theme .works-project{
   box-shadow: 0 0 5px #FFBD69;
 }
 
-body.dark-theme .information-link{
-  background: #2B2142;
+body.dark-theme .works-hover{
+  background: #231B36;
   color: #e8e4e1;
 }
-body.dark-theme .github-link{
-  background-color: #231B36;
+
+body.dark-theme .information-link{
+  background: transparent;
   color: #e8e4e1;
 }
 
@@ -235,7 +236,7 @@ a{
   position: absolute;
 }
 .darkLightSwitch:checked + .toggleDarkLight .ball{
-  transform: translateX(100px);
+  transform: translateX(-95px);
 }
 .toggleDarkLight{
   position: relative;
@@ -258,7 +259,7 @@ a{
 }
 .ball{
   position: absolute;
-  left: 0;
+  right: 0;
   height: 72px;
   width: 100px;
   background: linear-gradient(#17223b, #263859);
