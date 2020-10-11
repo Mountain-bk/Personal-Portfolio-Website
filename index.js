@@ -183,14 +183,14 @@ for(let i = 0; infoBtn.length > i; i++){
       carouselBanner3.innerHTML = "<img class='carousel-image' src='images/Portfolio Image3.png'>"
       titleText.innerHTML = "<p>Personal Portfolio Website</p>";
       urlText.innerHTML = "<a href='https://mountain-bk.github.io/Personal-Portfolio-Website/' target='_blank'>https://mountain-bk.github.io/Personal-Portfolio-Website/</a>"
-      languagesText.innerHTML = "HTML, CSS, JavaScript";
+      languagesText.innerHTML = "<p>HTML, CSS, JavaScript</p>";
     }else if(infoBtn[i].value == "Jappalo Wings"){
       carouselBanner1.innerHTML = "<img class='carousel-image' src='images/Jappalo Wings1.png'>"
       carouselBanner2.innerHTML = "<img class='carousel-image' src='images/Jappalo Wings2.png'>"
       carouselBanner3.innerHTML = "<img class='carousel-image' src='images/Jappalo Wings3.png'>"
       titleText.innerHTML = "<p>Jappalo Wings(Fast food imitation)</p>";
       urlText.innerHTML = "<a href='https://mountain-bk.github.io/Portfolio-Project-1/' target='_blank'>https://mountain-bk.github.io/Portfolio-Project-1/</a>"
-      languagesText.innerHTML = "HTML, CSS, JavaScript";
+      languagesText.innerHTML = "<p>HTML, CSS, JavaScript</p>";
     }else if(infoBtn[i].value == "Netflix Original Comedy Movie Suggestion Program"){
       carouselBanner1.innerHTML = "<img class='carousel-image' src='images/Netflix Suggestor1.png'>"
       carouselBanner2.innerHTML = "<img class='carousel-image' src='images/Netflix Suggestor2.png'>"
@@ -198,14 +198,14 @@ for(let i = 0; infoBtn.length > i; i++){
       titleText.innerHTML = "<p>Netflix Original Comedy Movie Suggestion Program</p>" +
       "<p><a href='https://engineering.stanford.edu/news/free-coding-education-time-covid-19' target='_blank'>CS106A - Code in Place Final Project</a></p>";
       urlText.innerHTML = "<a href='https://twitter.com/RyoYama37915576/status/1301489345308680192' target='_blank'>Demo Video</a>"
-      languagesText.innerHTML = "Python(Tkinter)"
+      languagesText.innerHTML = "<p>Python(Tkinter)</p>"
     }else if(infoBtn[i].value == "Web Scraper"){
       carouselBanner1.innerHTML = "<img class='carousel-image' src='images/Web Scraper1.png'>"
       carouselBanner2.innerHTML = "<img class='carousel-image' src='images/Web Scraper2.png'>"
       carouselBanner3.innerHTML = "<img class='carousel-image' src='images/Web Scraper3.png'>"
       titleText.innerHTML = "<p>Autonomous Vehicle Company Web Scraper</p>"
       urlText.innerHTML = "<a href='https://github.com/Mountain-bk/Autonomous-vehicle-companies-career-web-scraper' target='_blank'>Github</a>"
-      languagesText.innerHTML = "Python(bs4, Selenium, NumPy, Pandas, Matplotlib)"
+      languagesText.innerHTML = "<p>Python(Jupyter Notebook, bs4, Selenium, NumPy, Pandas, Matplotlib)</p>"
     }
   });
 }
