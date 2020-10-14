@@ -783,7 +783,7 @@ a{
     box-shadow: 0 0 6px black;
   }
   .darkLightSwitch:checked + .toggleDarkLight .ball{
-    transform: translateX(50px);
+    transform: translateX(-45px);
   }
   .contactMe-title{
     width: 90%;
